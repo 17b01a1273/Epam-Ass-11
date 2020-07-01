@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Form Validation </title>
+<script type="text/javascript">
+function valid(){
+var n,p,phone,text;
+n = document.getElementById("name").value;
+p = document.getElementById("password").value;
+phone = document.getElementById("phone").value;
+if(n.length < 6){
+	text = "Invalid Input!!";
+}
+ else {
+    text = "Input OK";
+  }
+document.getElementById("demo1").innerHTML = text;
+if(p.length < 6){
+	text = "Invalid Input!!";
+}
+ else {
+    text = "Input OK";
+  }
+document.getElementById("demo2").innerHTML = text;
+if(phone.length != 10){
+	text = "Invalid Input!!";
+}
+ else {
+    text = "Input OK";
+  }
+document.getElementById("demo4").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<center><h1> Login Form </h1></center>
+<form >
+<label>Enter Name</label>
+<input id="name" type = "text"><br>
+<p id="demo1"></p>
+<label>Enter password</label>
+<input id="password" type="password"><br>
+<p id="demo2"></p>
+<label>Enter email Id</label>
+<input id="email" type="email"><br>
+<p id="demo3"></p>
+<label>Enter phone Number</label>
+<input id="phone" type="text"><br>
+<p id="demo4"></p>
+<input type="button" value="submit" onClick="valid()"/></form>
+
+</body>
+</html> 
